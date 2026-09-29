@@ -1,0 +1,9 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<h2>Detalhes de {{ pet.nome }}</h2>
+<p><strong>Espécie:</strong> {{ pet.especie }}</p>
+<p><strong>Idade:</strong> {{ pet.idade }} anos</p>
+<p><strong>Descrição:</strong> {{ pet.descricao }}</p>
+<p><strong>Disponível para adoção:</strong> {% if pet.disponivel %} Sim {% else %} Não {% endif %}</p>
+<a href="{% url 'lista_pets' %}" class="btn btn-secondary">Voltar para a lista</a>
+{% endblock %}
